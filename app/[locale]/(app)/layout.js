@@ -7,7 +7,7 @@ import LanguageChanger from "@/app/ui/LanguageChanger";
 import {SearchForm} from "@/app/ui/searchForm";
 
 const getCategories = async (locale)=>{
-  const result = await fetch(`http://localhost:3000/api/content/categories?locale=${locale}`);
+  const result = await fetch(`${process.env.APP_URL}api/content/categories?locale=${locale}`);
   return await result.json()
 }
 export function generateStaticParams() {
