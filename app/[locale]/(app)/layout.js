@@ -6,10 +6,10 @@ import Link from "next/link";
 import LanguageChanger from "@/app/ui/LanguageChanger";
 import {SearchForm} from "@/app/ui/searchForm";
 
-const getCategories = async (locale)=>{
-  const result = await fetch(`${process.env.APP_URL}api/content/categories?locale=${locale}`);
-  return await result.json()
-}
+// const getCategories = async (locale)=>{
+//   const result = await fetch(`${process.env.APP_URL}api/content/categories?locale=${locale}`);
+//   return await result.json()
+// }
 export function generateStaticParams() {
   return i18nConfig.locales.map(locale => ({ locale }));
 }
@@ -24,7 +24,7 @@ const AppLayout = async (props)=>{
     children
   } = props;
 
-  const {categories} = await getCategories(locale)
+  // const {categories} = await getCategories(locale)
 
   return <div className="min-h-full bg-gray-50 dark:bg-gray-800 ">
     <nav className="bg-white border-gray-200 dark:bg-gray-900">

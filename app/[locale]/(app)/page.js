@@ -3,7 +3,7 @@ import ServerIntlProvider from "@/components/ServerIntlProvider"
 import Link from "next/link";
 import Pagination from "@/components/Pagination";
 import moment from "moment/moment";
-import {ImageComponent} from "@/components/ImageComponent";
+
 export const dynamic = 'force-dynamic'
 export const getArticles = async (locale, page, size) => {
 
